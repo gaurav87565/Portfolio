@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gaurav</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <a href="/index.html" class="logo">
+                <img src="logo.png" alt="Logo" class="logo-img" /> Gaurav
+            </a>
+            <ul class="nav-links">
+                <li><a href="/CSS/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/pages/about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+           
+        <main class="center">
+            <h1>Hey There!! <span class="wave">👋</span></h1>
+            <h2>I'm Gaurav</h2>
+        </main>
+
+        <footer>
+            <p>© Gaurav - 2025</p>
+            <div class="social-icons">
+                <a href="https://github.com/gaurav87565" target="_blank">
+                    <i class="fab fa-github"></i></a>
+                <a href="https://youtube.com/Da_Pirates" target="_blank">
+                    <i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/gaurav87565" target="_blank">
+                    <i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/_dapirates" target="_blank">
+                    <i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+        
+            hamburger.addEventListener("click", (e) => {
+                e.stopPropagation(); // Prevent the click from bubbling up
+                navLinks.classList.toggle("active");
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    navLinks.classList.remove("active");
+                }
+            });
+        </script>          
+    </body>
+</html>
